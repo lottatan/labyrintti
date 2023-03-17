@@ -1,9 +1,10 @@
 # Labyrintti
 
-Sovellukseni on labyrintti. Yritän etsiä lyhimmän reitin ulos labyrintistä.
-Käytän Djikstran algoritmia sovelluksen ratkaisualgoritmina.
+## Linkki määrittelydokumenttiin
 
-Käytän ohjelmointikielenäni Pythonia ja sovelluksen kieli on englanti.
+[Määrittelydokumentti](https://github.com/lottatan/labyrintti/blob/0db25d9f73a2d639f670e89e017f6995eafd702d/dokumentaatio/maarittelydokumentti.md)
 
-Opinto-ohjelmani on tietojenkäsittelytieteen kandidaatti.
+## Viikkoraportit
+
+[Viikko 1](https://github.com/lottatan/labyrintti/blob/0db25d9f73a2d639f670e89e017f6995eafd702d/dokumentaatio/viikkoraportti1.md)
 
