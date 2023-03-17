@@ -1,5 +1,5 @@
-Sovellukseni on labyrintti. Yritän etsiä lyhimmän reitin ulos labyrintistä. Käytän Djikstran algoritmia sovelluksen ratkaisualgoritmina.
+Sovellukseni on labyrintti. Yritän etsiä lyhimmän reitin ulos labyrintistä. Sovelluksessa vertailen syvyys- ja leveyshakua.
 
-Käytän ohjelmointikielenäni Pythonia ja sovelluksen kieli on englanti.
+Käytän ohjelmointikielenäni Pythonia ja sovelluksen kieli on suomi.
 
 Opinto-ohjelmani on tietojenkäsittelytieteen kandidaatti.
