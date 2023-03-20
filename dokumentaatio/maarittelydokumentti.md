@@ -1,11 +1,11 @@
-Sovellukseni on labyrintti. Yritän etsiä lyhimmän reitin ulos labyrintistä. Sovelluksessa vertailen DFS-algotritmia ja dead-end filling algoritmia.
+Sovellukseni on labyrintti. Yritän etsiä lyhimmän reitin ulos labyrintistä. Sovelluksessa vertailen Trémauxin algoritmia ja dead-end filling algoritmia.
 
 
-Käytän ohjelmointikielenäni Pythonia ja sovelluksen kieli on suomi.
+Käytän ohjelmointikielenäni Pythonia ja sovelluksen kieli on suomi. Osaan sujuvasti ainoastaan Python-kieltä.
 
 Opinto-ohjelmani on tietojenkäsittelytieteen kandidaatti ja olen toisen vuoden opiskelija.
 
-DFS-algoritmin aikavaativuus on O(|V| + |E|) ja tilavaativuus on O(|V|). Dead-end filling algoritmin tilavaativuutta on vaikeampi määritellä, mutta sen tilavaativuus on myös  O(|V|).
+Trémaux algoritmin aikavaativuus on O(|V| + |E|) ja tilavaativuus on O(|V|). Dead-end filling algoritmin tilavaativuutta on vaikeampi määritellä, mutta sen tilavaativuus on myös  O(|V|).
 V kuvaa solmujen määrää ja E kaarten määrä.
 
 
