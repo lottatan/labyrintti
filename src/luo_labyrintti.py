@@ -18,7 +18,7 @@ class Labyrintti:
                 self.labyrintti[i].append("X")
 
     def aloitus_kohta(self):
-        """Valitaan ylimmältä riviltä satunnainen aloituskohta labyrintille ja varmistetaan, että se ei ole labyrintin reunassa"""
+        """Valitaan satunnainen aloituskohta labyrintille ja varmistetaan, että se ei ole labyrintin reunassa"""
         self.aloitus_leveys = int(random.random()*self.leveys)
         self.aloitus_korkeus = int(random.random()*self.korkeus)
 
