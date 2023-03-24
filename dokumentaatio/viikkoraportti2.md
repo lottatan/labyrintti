@@ -3,4 +3,6 @@ Loin myös .gitignore tiedoston ja asensin riippuvuudet.
 
 Alotin harjoittamaan labyrintin luomista Primin algoritmilla niin, että labyrintti alkaa aina ylimmältä riviltä.
 
-Työmäärä viikolla 2: 5
+Aloitin myös tekemään ui ja index tiedostoja, sekä yksikkötestaamisen.
+
+Työmäärä viikolla 2: 7
