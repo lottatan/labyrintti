@@ -4,10 +4,13 @@ class Labyrintti:
     def __init__(self, leveys, korkeus):
         self.leveys = leveys
         self.korkeus = korkeus
-        self.labyrintti = []
 
         self.aloitus_korkeus = 0
         self.aloitus_leveys = 0
+
+        self.labyrintti = []
+        self.seinat = []
+
 
     def alusta_labyrintti(self):
         """Ensin tehdään "tyhjä" labyrintti"""
@@ -20,12 +23,7 @@ class Labyrintti:
     def aloitus_kohta(self):
         """Valitaan satunnainen aloituskohta labyrintille ja varmistetaan, että se ei ole labyrintin reunassa"""
         self.aloitus_leveys = int(random.random()*self.leveys)
-        self.aloitus_korkeus = int(random.random()*self.korkeus)
-
-        if self.aloitus_korkeus == 0:
-            self.aloitus_korkeus += 1
-        if self.aloitus_korkeus == self.korkeus-1:
-            self.aloitus_korkeus -= 1
+        self.aloitus_korkeus = 1
 
         if self.aloitus_leveys == 0:
             self.aloitus_leveys += 1
@@ -51,20 +49,20 @@ class Labyrintti:
         self.aloitus_kohta()
 
         self.labyrintti[self.aloitus_korkeus][self.aloitus_leveys] = "."
-        seinat = []
-        seinat.append([self.aloitus_korkeus-1, self.aloitus_leveys])
-        seinat.append([self.aloitus_korkeus, self.aloitus_leveys-1])
-        seinat.append([self.aloitus_korkeus, self.aloitus_leveys+1])
-        seinat.append([self.aloitus_korkeus+1, self.aloitus_leveys])
+        
+        self.seinat.append([self.aloitus_korkeus-1, self.aloitus_leveys])
+        self.seinat.append([self.aloitus_korkeus, self.aloitus_leveys-1])
+        self.seinat.append([self.aloitus_korkeus, self.aloitus_leveys+1])
+        self.seinat.append([self.aloitus_korkeus+1, self.aloitus_leveys])
 
         self.labyrintti[self.aloitus_korkeus-1][self.aloitus_leveys] = "#"
         self.labyrintti[self.aloitus_korkeus][self.aloitus_leveys-1] = "#"
         self.labyrintti[self.aloitus_korkeus][self.aloitus_leveys+1] = "#"
         self.labyrintti[self.aloitus_korkeus+1][self.aloitus_leveys] = "#"
 
-        while seinat:
+        while self.seinat:
             """Luodaan labyrintti tarkastamalla seinä kerrallaan"""
-            random_seina = seinat[int(random.random()*len(seinat))-1]
+            random_seina = self.seinat[int(random.random()*len(self.seinat))-1]
 
             """Tarkastetaan, onko kyseessä vasemmanpuoleisin seinä"""
             if random_seina[1] != 0:
@@ -79,28 +77,28 @@ class Labyrintti:
                         if random_seina[0] != 0:
                             if self.labyrintti[random_seina[0]-1][random_seina[1]] != ".":
                                 self.labyrintti[random_seina[0]-1][random_seina[1]] = "#"
-                            if [random_seina[0]-1, random_seina[1]] not in seinat:
-                                seinat.append([random_seina[0]-1, random_seina[1]])
+                            if [random_seina[0]-1, random_seina[1]] not in self.seinat:
+                                self.seinat.append([random_seina[0]-1, random_seina[1]])
 
                         """Alin piste"""
                         if random_seina[0] != self.korkeus-1:
                             if self.labyrintti[random_seina[0]+1][random_seina[1]] != ".":
                                 self.labyrintti[random_seina[0]+1][random_seina[1]] = "#"
                             
-                            if [random_seina[0]+1, random_seina[1]] not in seinat:
-                                seinat.append([random_seina[0]+1, random_seina[1]])
+                            if [random_seina[0]+1, random_seina[1]] not in self.seinat:
+                                self.seinat.append([random_seina[0]+1, random_seina[1]])
 
                         """Vasemmanpuoleisin piste"""
                         if random_seina[1] != 0:
                             if self.labyrintti[random_seina[0]][random_seina[1]-1] != ".":
                                 self.labyrintti[random_seina[0]][random_seina[1]-1] = "#"
 
-                            if [random_seina[0], random_seina[1]-1] not in seinat:
-                                seinat.append([random_seina[0], random_seina[1]-1])
+                            if [random_seina[0], random_seina[1]-1] not in self.seinat:
+                                self.seinat.append([random_seina[0], random_seina[1]-1])
                                 
-                    for seina in seinat:
+                    for seina in self.seinat:
                         if seina[0] == random_seina[0] and seina[1] == random_seina[1]:
-                            seinat.remove(seina)
+                            self.seinat.remove(seina)
 
                     continue
             
@@ -118,26 +116,26 @@ class Labyrintti:
                         if random_seina[0] != 0:
                             if self.labyrintti[random_seina[0]-1][random_seina[1]] != ".":
                                 self.labyrintti[random_seina[0]-1][random_seina[1]] = "#"
-                            if [random_seina[0]-1, random_seina[1]] not in seinat:
-                                seinat.append([random_seina[0]-1, random_seina[1]])
+                            if [random_seina[0]-1, random_seina[1]] not in self.seinat:
+                                self.seinat.append([random_seina[0]-1, random_seina[1]])
                         
                         """Vasemmanpuoleisin piste"""
                         if random_seina[1] != 0:
                             if self.labyrintti[random_seina[0]][random_seina[1]-1] != ".":
                                 self.labyrintti[random_seina[0]][random_seina[1]-1] = "#"
-                            if [random_seina[0], random_seina[1]-1] not in seinat:
-                                seinat.append([random_seina[0], random_seina[1]-1])
+                            if [random_seina[0], random_seina[1]-1] not in self.seinat:
+                                self.seinat.append([random_seina[0], random_seina[1]-1])
 
                         """Oikeanpuoleisin piste"""
                         if random_seina[1] != self.leveys-1:
                             if self.labyrintti[random_seina[0]][random_seina[1]+1] != ".":
                                 self.labyrintti[random_seina[0]][random_seina[1]+1] = "#"
-                            if [random_seina[0], random_seina[1]+1] not in seinat:
-                                seinat.append([random_seina[0], random_seina[1]+1])
+                            if [random_seina[0], random_seina[1]+1] not in self.seinat:
+                                self.seinat.append([random_seina[0], random_seina[1]+1])
                 
-                    for seina in seinat:
+                    for seina in self.seinat:
                         if seina[0] == random_seina[0] and seina[1] == random_seina[1]:
-                            seinat.remove(seina)
+                            self.seinat.remove(seina)
                         
                     continue
 
@@ -153,26 +151,26 @@ class Labyrintti:
                         if random_seina[0] != self.korkeus-1:
                             if self.labyrintti[random_seina[0]+1][random_seina[1]] != ".":
                                 self.labyrintti[random_seina[0]+1][random_seina[1]] = "#"
-                            if [random_seina[0]+1, random_seina[1]] not in seinat:
-                                seinat.append([random_seina[0]+1, random_seina[1]])
+                            if [random_seina[0]+1, random_seina[1]] not in self.seinat:
+                                self.seinat.append([random_seina[0]+1, random_seina[1]])
                                 
                         """Vasemmanpuoleisin piste"""
                         if random_seina[1] != 0:
                             if self.labyrintti[random_seina[0]][random_seina[1]-1] != ".":
                                 self.labyrintti[random_seina[0]][random_seina[1]-1] = "#"
-                            if [random_seina[0], random_seina[1]-1] not in seinat:
-                                seinat.append([random_seina[0], random_seina[1]-1])
+                            if [random_seina[0], random_seina[1]-1] not in self.seinat:
+                                self.seinat.append([random_seina[0], random_seina[1]-1])
 
                         """Oikeanpuoleisin piste"""        
                         if random_seina[1] != self.leveys-1:
                             if self.labyrintti[random_seina[0]][random_seina[1]+1] != ".":
                                 self.labyrintti[random_seina[0]][random_seina[1]+1] = "#"
-                            if [random_seina[0], random_seina[1]+1] not in seinat:
-                                seinat.append([random_seina[0], random_seina[1]+1])
+                            if [random_seina[0], random_seina[1]+1] not in self.seinat:
+                                self.seinat.append([random_seina[0], random_seina[1]+1])
                     
-                    for seina in seinat:
+                    for seina in self.seinat:
                         if seina[0] == random_seina[0] and seina[1] == random_seina[1]:
-                            seinat.remove(seina)
+                            self.seinat.remove(seina)
                         
                     continue
 
@@ -188,38 +186,47 @@ class Labyrintti:
                         if random_seina[1] != self.leveys-1:
                             if self.labyrintti[random_seina[0]][random_seina[1]+1] != ".":
                                 self.labyrintti[random_seina[0]][random_seina[1]+1] = "#"
-                            if [random_seina[0], random_seina[1]+1] not in seinat:
-                                seinat.append([random_seina[0], random_seina[1]+1])
+                            if [random_seina[0], random_seina[1]+1] not in self.seinat:
+                                self.seinat.append([random_seina[0], random_seina[1]+1])
                         
                         """Ylin piste"""
                         if random_seina[0] != self.korkeus-1:
                             if self.labyrintti[random_seina[0]+1][random_seina[1]] != ".":
                                 self.labyrintti[random_seina[0]+1][random_seina[1]] = "#"
-                            if [random_seina[0]+1, random_seina[1]] not in seinat:
-                                seinat.append([random_seina[0]+1, random_seina[1]])
+                            if [random_seina[0]+1, random_seina[1]] not in self.seinat:
+                                self.seinat.append([random_seina[0]+1, random_seina[1]])
 
                         """Vasemmanpuoleisin piste"""
                         if random_seina[0] != 0:
                             if self.labyrintti[random_seina[0]-1][random_seina[1]] != ".":
                                 self.labyrintti[random_seina[0]-1][random_seina[1]] = "#"
-                            if [random_seina[0]-1, random_seina[1]] not in seinat:
-                                seinat.append([random_seina[0]-1, random_seina[1]])
+                            if [random_seina[0]-1, random_seina[1]] not in self.seinat:
+                                self.seinat.append([random_seina[0]-1, random_seina[1]])
 
-                    for seina in seinat:
+                    for seina in self.seinat:
                         if seina[0] == random_seina[0] and seina[1] == random_seina[1]:
-                            seinat.remove(seina)
+                            self.seinat.remove(seina)
                     
                     continue
             
-            for seina in seinat:
+            for seina in self.seinat:
                 if seina[0] == random_seina[0] and seina[1] == random_seina[1]:
-                            seinat.remove(seina)
+                            self.seinat.remove(seina)
+
         
         """Merkataan mahdolliset jäljelle jääneet vierailemattomat osat seinäksi"""
         for i in range(0, self.korkeus):
             for j in range(0, self.leveys):
                 if self.labyrintti[i][j] == "X":
                     self.labyrintti[i][j] = "#"
+        
+        """Tehdään labyrinttiin monta ulospääsykohtaa"""
+        for i in range(0, self.leveys):
+            if self.labyrintti[self.korkeus-2][i] == ".":
+                self.labyrintti[self.korkeus-1][i] = "."
+
+        """Tehdään labyrinttiin yksi sisäänpääsykohta"""
+        self.labyrintti[self.aloitus_korkeus-1][self.aloitus_leveys] = "."
         
         for i in range(0, self.korkeus):
             print(self.labyrintti[i])
