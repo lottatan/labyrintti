@@ -233,6 +233,6 @@ class Labyrintti:
 
 if __name__ == "__main__":
     k = 18
-    l = 18
+    l = 12
     laby = Labyrintti(l, k)
     laby.luo_labyrintti()
