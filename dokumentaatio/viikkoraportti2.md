@@ -5,4 +5,4 @@ Alotin harjoittamaan labyrintin luomista Primin algoritmilla niin, että labyrin
 
 Aloitin myös tekemään ui ja index tiedostoja, sekä yksikkötestaamisen.
 
-Työmäärä viikolla 2: 7
+Työmäärä viikolla 2: 9

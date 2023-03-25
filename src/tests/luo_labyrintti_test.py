@@ -4,9 +4,9 @@ from luo_labyrintti import Labyrintti
 class TestLabyrintti(unittest.TestCase):
     def setup(self):
         self.labyrintti = Labyrintti(15, 15)
+        self.labyrintti.luo_labyrintti()
 
     def test_luo_labyrintti(self):
-        self.labyrintti.luo_labyrintti()
         self.assertEqual(len(self.labyrintti), 15)
         self.assertEqual(len(self.labyrintti[0]), 15)
 
@@ -17,5 +17,3 @@ class TestLabyrintti(unittest.TestCase):
                 laskuri += 1
         
         self.assertEqual(laskuri, 1)
-        
-        
