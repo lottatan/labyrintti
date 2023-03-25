@@ -2,9 +2,10 @@ import unittest
 from luo_labyrintti import Labyrintti
 
 class TestLabyrintti(unittest.TestCase):
-    def setup(self):
-        self.labyrintti = Labyrintti(15, 15)
-        self.labyrintti.luo_labyrintti()
+    def setUp(self):
+        self.laby = Labyrintti(15, 15)
+        self.laby.luo_labyrintti()
+        self.labyrintti = self.laby.labyrintti
 
     def test_luo_labyrintti(self):
         self.assertEqual(len(self.labyrintti), 15)
@@ -12,7 +13,7 @@ class TestLabyrintti(unittest.TestCase):
 
     def test_yksi_sisaanpaasy(self):
         laskuri = 0
-        for i in (0, 15):
+        for i in range(0, 15):
             if self.labyrintti[0][i] == ".":
                 laskuri += 1
         
