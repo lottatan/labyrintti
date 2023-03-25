@@ -18,3 +18,11 @@ class TestLabyrintti(unittest.TestCase):
                 laskuri += 1
         
         self.assertEqual(laskuri, 1)
+
+    def test_ainakin_yksi_ulospaasy(self):
+        laskuri = 0
+        for i in range(0, 15):
+            if self.labyrintti[14][i] == ".":
+                laskuri += 1
+
+        self.assertNotEqual(laskuri, 0)
