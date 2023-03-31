@@ -61,7 +61,10 @@ class Tremaux:
                 vierailtu[seuraava[0]][seuraava[1]] = 1
                 pino.append(seuraava)
             else:
-                pino.pop() 
+                pino.pop()
+                 
+        else:
+            print("Ei ratkaisua")
 
 if __name__ == "__main__":
     labyrintti = [
