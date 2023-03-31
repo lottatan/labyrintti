@@ -49,10 +49,10 @@ class TestDeadEndFilling(unittest.TestCase):
         self.assertEqual(aloitusleveys, 12)
 
     # def test_tunnistaa_umpikujan(self):
-    """testi ei toimi vielä"""
-    #     umpikuja = self.labyrintti.onko_umpikuja(6,1)
+        """ei toimi vielä, en tiedä miksi"""
+        # umpikuja = self.labyrintti.onko_umpikuja(6, 1)
 
-    #     self.assertEqual(umpikuja, True)
+        # self.assertEqual(umpikuja, True)
 
     def test_ratkaise(self):
         ratkaistu = self.labyrintti.ratkaise()

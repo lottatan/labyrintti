@@ -4,7 +4,6 @@ class DeadEndFilling:
         self.labyrintti = labyrintti
         self.korkeus = len(self.labyrintti)
         self.leveys = len(self.labyrintti[0])
-        self.aloituskorkeus, self.aloitusleveys = self.aloituskohta()
 
 
     def aloituskohta(self):
@@ -26,7 +25,7 @@ class DeadEndFilling:
             if 0 <= korkeus < self.korkeus-1:
                 if self.labyrintti[korkeus+1][leveys] == '#':
                     laskuri += 1
-            
+                   
             if 0 < korkeus <= self.korkeus-1:
                 if self.labyrintti[korkeus-1][leveys] == '#':
                     laskuri += 1
@@ -34,15 +33,15 @@ class DeadEndFilling:
             if 0 <= leveys < self.leveys-1:
                 if self.labyrintti[korkeus][leveys+1] == '#':
                     laskuri += 1
-            
+
             if 0 < leveys <= self.leveys-1:
                 if self.labyrintti[korkeus][leveys-1] == '#':
                     laskuri += 1
-            
+
             if laskuri == 3:
                 self.labyrintti[korkeus][leveys] = '#'
                 return True
-            
+   
         return False
             
 
