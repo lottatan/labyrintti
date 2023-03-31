@@ -21,26 +21,26 @@ class DeadEndFilling:
 
         laskuri = 0
 
-        if self.labyrintti[korkeus][leveys] == ".":
+        if self.labyrintti[korkeus][leveys] == '.':
 
             if 0 <= korkeus < self.korkeus-1:
-                if self.labyrintti[korkeus+1][leveys] == "#":
+                if self.labyrintti[korkeus+1][leveys] == '#':
                     laskuri += 1
             
             if 0 < korkeus <= self.korkeus-1:
-                if self.labyrintti[korkeus-1][leveys] == "#":
+                if self.labyrintti[korkeus-1][leveys] == '#':
                     laskuri += 1
 
             if 0 <= leveys < self.leveys-1:
-                if self.labyrintti[korkeus][leveys+1] == "#":
+                if self.labyrintti[korkeus][leveys+1] == '#':
                     laskuri += 1
             
             if 0 < leveys <= self.leveys-1:
-                if self.labyrintti[korkeus][leveys-1] == "#":
+                if self.labyrintti[korkeus][leveys-1] == '#':
                     laskuri += 1
             
             if laskuri == 3:
-                self.labyrintti[korkeus][leveys] = "#"
+                self.labyrintti[korkeus][leveys] = '#'
                 return True
             
         return False
@@ -57,8 +57,8 @@ class DeadEndFilling:
                     if self.onko_umpikuja(korkeus, leveys):
                         polku = True
         
-        for i in range(0, self.korkeus):
-            print(self.labyrintti[i])
+        ratkaisu = self.labyrintti
+        return ratkaisu
 
 
 if __name__ == "__main__":

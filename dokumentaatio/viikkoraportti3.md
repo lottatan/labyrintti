@@ -1,0 +1,3 @@
+Tällä viikolla aloin tekemään dead-end filling algoritmia ja trémauxin algoritmia. Tällä hetkellä ohjelma toimii testauskutsujen avulla, enkä ole vielä linkittänyt eri tiedostoja toisiinsa. Sitten, kun olen tyytyväinen jokaiseen tiedostoon ja algoritmin toimintaan, olen varma että ne toimivat myös yhdessä sekä niille on tehty tarpeeksi testejä, yhdistän tiedostot toisiinsa niin, että ohjelma toimii haluamallani tavalla. Tällä hetkellä algoritmeille olen luonut ainoastaan yksikkötestejä.
+
+Työmäär viikolla 3: 4 tuntia
