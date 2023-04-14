@@ -75,9 +75,12 @@ def dead_end_ratkaisu(ratkaisu, aika):
 
 
 def lopputulos(lopputulos):
+    """Tämä funktio näyttää lopputuloksen"""
+    
     if lopputulos == "Dead End Filling":
         print("Dead End Filling -algoritmi ratkaisi labyrintin nopeammin!")
     elif lopputulos == "Trémaux":
         print("Trémauxin algoritmi ratkaisi labyrintin nopeammin!")
     elif lopputulos == "yhtä nopeasti":
         print("Molemmat algoritmit ratkaisivat labyrintin yhtä nopeasti!")
+    print('\n')
