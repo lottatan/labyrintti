@@ -1,6 +1,8 @@
 # Käyttöohje
 
-1. Kloonaa repositorio koneellesi ja siirry repositorion juureen antamalla terminaalissa komento "cd labyrintti"
+1. Kloonaa repositorio koneellesi ja siirry repositorion juureen antamalla terminaalissa komento 
+
+``cd labyrintti``
 
 ## Käynnistysohje
 
