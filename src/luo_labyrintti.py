@@ -228,8 +228,7 @@ class Labyrintti:
         """Tehdään labyrinttiin yksi sisäänpääsykohta"""
         self.labyrintti[self.aloitus_korkeus-1][self.aloitus_leveys] = "."
         
-        for i in range(0, self.korkeus):
-            print(self.labyrintti[i])
+        return self.labyrintti
 
 if __name__ == "__main__":
     k = 18

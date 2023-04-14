@@ -34,8 +34,7 @@ class Tremaux:
             leveys = atm[1]
 
             if korkeus == self.korkeus-1 and self.labyrintti[korkeus][leveys] == ".":
-                print(pino)
-                break
+                return(pino)
 
             ei_vierailtu = []
 
@@ -64,7 +63,7 @@ class Tremaux:
                 pino.pop()
                  
         else:
-            print("Ei ratkaisua")
+            return ("Ei ratkaisua")
 
 if __name__ == "__main__":
     labyrintti = [
