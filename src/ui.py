@@ -1,4 +1,3 @@
-from colorama import init
 from colorama import Fore
 
 def tervetuloa():

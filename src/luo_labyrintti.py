@@ -229,9 +229,3 @@ class Labyrintti:
         self.labyrintti[self.aloitus_korkeus-1][self.aloitus_leveys] = "."
         
         return self.labyrintti
-
-if __name__ == "__main__":
-    k = 18
-    l = 12
-    laby = Labyrintti(l, k)
-    laby.luo_labyrintti()
