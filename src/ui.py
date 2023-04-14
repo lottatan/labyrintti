@@ -7,25 +7,34 @@ def tervetuloa():
     print('\n')
     print("Ensimmäiseksi, valitaan labyrinttimme koko")
 
-    try:
-        korkeus = int(input("Valitse labyrintin korkeus (vähintään 5 ruutua): "))
-        if korkeus < 5:
-            raise ValueError
-    except ValueError:
-        print("Valitse suurempi luku")
     
-    try:
-        leveys = int(input("Valitse labyrintin leveys (vähintään 5 ruutua): "))
-        if leveys < 5:
-            raise ValueError
-    except ValueError:
-        print("Valitse suurempi luku")
+    while True:
+        try:
+            korkeus = int(input("Valitse labyrintin korkeus (vähintään 5 ruutua): "))
+            liian_pieni_luku(korkeus)
+            break
+        except ValueError:
+            print("Valitse suurempi luku")
+            continue
+    
+    while True:
+        try:
+            leveys = int(input("Valitse labyrintin leveys (vähintään 5 ruutua): "))
+            liian_pieni_luku(leveys)
+            break
+        except ValueError:
+            print("Valitse suurempi luku")
+            continue
 
     print('\n')
     print("Labyrinttimme luomisessa valitaan arpomalla aloituskohta ja verrataan Trémaux- ja dead-end filling-algoritmeja, kumpi niistä ratkaisee labyrintin nopeammin!")
     print('\n')
 
     return korkeus, leveys
+
+def liian_pieni_luku(luku):
+    if luku < 5:
+        raise ValueError
 
 def nayta_labyrintti(labyrintti):
     """Tulostetaan luotu labyrintti"""
@@ -76,7 +85,7 @@ def dead_end_ratkaisu(ratkaisu, aika):
 
 def lopputulos(lopputulos):
     """Tämä funktio näyttää lopputuloksen"""
-    
+
     if lopputulos == "Dead End Filling":
         print("Dead End Filling -algoritmi ratkaisi labyrintin nopeammin!")
     elif lopputulos == "Trémaux":
