@@ -20,6 +20,8 @@ jobs:
         run: pip install poetry
       - name: Install dependencies
         run: poetry install
+      - name: install Colorama
+        run: pip install colorama
       - name: Run tests
         run: poetry run coverage run --branch -m pytest
       - name: Upload coverage reports to Codecov
