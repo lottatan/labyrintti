@@ -8,3 +8,12 @@ class TestUi(unittest.TestCase):
 
     def test_liian_pieni_numero(self):
         self.assertRaises(ValueError, ui.liian_pieni_luku, self.pieni_numero)
+
+    def test_lopputulos_tremaux(self):
+        pass
+    
+    def test_lopputulos_dead_end_filling(self):
+        pass
+
+    def test_lopputulos_tasapeli(self):
+        pass
