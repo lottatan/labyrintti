@@ -1,3 +1,5 @@
+![GHA workflow badge](https://github.com/lottatan/labyrintti/workflows/CI/badge.svg)
+
 # Labyrintti
 
 Tietorakenteet ja algoritmit laboratoriotyö kevät 2023
