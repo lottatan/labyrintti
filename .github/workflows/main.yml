@@ -24,5 +24,5 @@ jobs:
         run: python3 -m pip install colorama
       - name: Run tests
         run: poetry run coverage run --branch -m pytest
-      - name: Upload coverage reports to Codecov
-        uses: codecov/codecov-action@v3
+      - name: Coverage report to Codecov
+        run: bash <(curl -s https://codecov.io/bash)
