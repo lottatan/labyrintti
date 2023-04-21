@@ -5,9 +5,11 @@
 
 Tietorakenteet ja algoritmit laboratoriotyö kevät 2023
 
-## Linkki määrittelydokumenttiin
+## Dokumentaatiota
 
 [Määrittelydokumentti](https://github.com/lottatan/labyrintti/blob/main/dokumentaatio/maarittelydokumentti.md)
+
+[Ohjelman kuvaus](https://github.com/lottatan/labyrintti/blob/main/dokumentaatio/kuvaus.md)
 
 
 ## Linkki Käyttöohjeeseen
