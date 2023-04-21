@@ -1,5 +1,5 @@
 ![GHA workflow badge](https://github.com/lottatan/labyrintti/workflows/CI/badge.svg)
-[![codecov](https://codecov.io/gh/lottatan/labyrintti/branch/main/graph/badge.svg?token=46d660dc-c149-4030-b256-45fdf41a7a91)](https://codecov.io/gh/lottatan/labyrintti)
+[![codecov](https://codecov.io/gh/lottatan/labyrintti/branch/main/graph/badge.svg?token=VMWXSS7TFK)](https://codecov.io/gh/lottatan/labyrintti)
 
 # Labyrintti
 
