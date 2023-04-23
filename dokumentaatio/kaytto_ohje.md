@@ -10,7 +10,11 @@
 
 `` poetry install ``
 
-2. Käynnistä ohjelma komenolla:
+3. Asenna colorama moduuli komennolla:
+
+`` pip install colorama ``
+
+3. Käynnistä ohjelma komenolla:
 
 `` poetry run invoke start``
 

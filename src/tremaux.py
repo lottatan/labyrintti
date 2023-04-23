@@ -62,5 +62,4 @@ class Tremaux:
             else:
                 pino.pop()
                  
-        else:
-            return ("Ei ratkaisua")
+        return ("Ei ratkaisua")
