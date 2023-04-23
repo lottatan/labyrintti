@@ -22,15 +22,8 @@ class Labyrintti:
 
     def aloitus_kohta(self):
         """Valitaan satunnainen aloituskohta labyrintille ja varmistetaan, että se ei ole labyrintin reunassa"""
-        self.aloitus_leveys = int(random.random()*self.leveys)
+        self.aloitus_leveys = int(random.randint(1, self.leveys-1))
         self.aloitus_korkeus = 1
-
-        if self.aloitus_leveys == 0:
-            self.aloitus_leveys += 1
-        if self.aloitus_leveys == self.leveys-1:
-            self.aloitus_leveys -= 1
-        
-        return
 
     def viereiset_polut(self, random_seina):
         """Lasketaan viereisten polkujen määrä"""
