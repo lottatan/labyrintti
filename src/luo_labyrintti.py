@@ -27,7 +27,7 @@ class Labyrintti:
 
         if self.aloitus_leveys == 0:
             self.aloitus_leveys += 1
-        if self.aloitus_leveys == self.leveys-1:
+        elif self.aloitus_leveys == self.leveys-1:
             self.aloitus_leveys -= 1
 
     def viereiset_polut(self, random_seina):
