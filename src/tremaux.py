@@ -61,5 +61,3 @@ class Tremaux:
                 pino.append(seuraava)
             else:
                 pino.pop()
-                 
-        return ("Ei ratkaisua")
