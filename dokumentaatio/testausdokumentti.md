@@ -2,7 +2,7 @@
 
 ## Projektin testaus
 
-Tämä projekti on testattu yksikkötestauksella unittestin avulla. Testaus kattaa src-kansion dead_end_filling.py, luo_labyrintti.py ja tremaux.py tiedosot, eikä ota huomioon index.py tai ui.py tiedostoja. 
+Tämä projekti on testattu yksikkötestauksella unittestin avulla. Testaus kattaa src-kansion tiedostot poislukien index.py tai ui.py tiedostot. 
 
 ![coverage-report](coverage-report.png)
 

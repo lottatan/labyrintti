@@ -11,6 +11,8 @@ Tietorakenteet ja algoritmit laboratoriotyö kevät 2023
 
 [Ohjelman kuvaus](https://github.com/lottatan/labyrintti/blob/main/dokumentaatio/kuvaus.md)
 
+[Testausdokumentti](https://github.com/lottatan/labyrintti/blob/main/dokumentaatio/testausdokumentti.md)
+
 
 ## Linkki Käyttöohjeeseen
 
@@ -28,3 +30,5 @@ Tietorakenteet ja algoritmit laboratoriotyö kevät 2023
 [Viikko 4](https://github.com/lottatan/labyrintti/blob/main/dokumentaatio/viikkoraportti4.md)
 
 [Viikko 5](https://github.com/lottatan/labyrintti/blob/main/dokumentaatio/viikkoraportti5.md)
+
+[Viikko 6](https://github.com/lottatan/labyrintti/blob/main/dokumentaatio/viikkoraportti6.md)
