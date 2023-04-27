@@ -23,12 +23,16 @@ Seuraavassa taulukossa on tieto syötteiden koosta ja kummankin algoritmin ratka
 
 Seuraavassa taulukossa on kuvaus Trémauxin algoritmin nopeudesta:
 
-![Trémaux-kaavio](tremaux.png)
+![Trémaux-kaavio](tremaux1.png)
 
 
 Seuraavassa taulukossa on kuvaus Dead-End-Filling algoritmin nopeudesta:
 
-![Dead-End-Filling-kaavio](dead-end-filling.png)
+![Dead-End-Filling-kaavio](dead-end-filling1.png)
+
+Kun laitetaan molemmat kaaviot yhteen, huomataan, että Dead-End Fillinf -algoritmi on reilusti Trémauxin algoritmia hitaampi.
+
+![molemmat](molemmat.png)
 
 
 
