@@ -10,7 +10,8 @@ def tervetuloa():
     
     while True:
         try:
-            korkeus = int(input("Valitse labyrintin korkeus (kokonaisluku, joka on vähintään 5 ruutua ja enintään 30 ruutua): "))
+            korkeus = int(input("Valitse labyrintin korkeus (kokonaisluku, joka on vähintään 5 ruutua ja enintään 80 ruutua): "))
+            ei_ole_kokonaisluku(korkeus)
             liian_pieni_luku(korkeus)
             liian_iso_luku(korkeus)
             break
@@ -20,7 +21,8 @@ def tervetuloa():
     
     while True:
         try:
-            leveys = int(input("Valitse labyrintin leveys (kokonaisluku, joka on vähintään 5 ruutua ja enintään 30 ruutua): "))
+            leveys = int(input("Valitse labyrintin leveys (kokonaisluku, joka on vähintään 5 ruutua ja enintään 80 ruutua): "))
+            ei_ole_kokonaisluku(leveys)
             liian_pieni_luku(leveys)
             liian_iso_luku(leveys)
             break
@@ -39,8 +41,15 @@ def liian_pieni_luku(luku):
         raise ValueError
 
 def liian_iso_luku(luku):
-    if luku > 30:
+    if luku > 80:
         raise ValueError
+    
+def ei_ole_kokonaisluku(luku):
+    if isinstance(luku, int):
+        pass
+    else:
+        raise ValueError
+
 
 def nayta_labyrintti(labyrintti):
     """Tulostetaan luotu labyrintti"""
@@ -70,7 +79,7 @@ def tre_ratkaisu(ratkaisu, aika):
                 print(Fore.RED + str(ratkaisu[i][j]), end= " ")
         print('\n')
 
-    print(Fore.WHITE + f"Trémauxin algoritmi ratkaisi labyrintin {aika} sekunnissa.")
+    print(Fore.WHITE + f"Trémauxin algoritmi ratkaisi labyrintin {aika} nanosekunnissa.")
     print('\n')
 
 def dead_end_ratkaisu(ratkaisu, aika):
@@ -85,7 +94,7 @@ def dead_end_ratkaisu(ratkaisu, aika):
                 print(Fore.RED + str(ratkaisu[i][j]), end= " ")
         print('\n')
     
-    print(Fore.WHITE + f"Dead End Filling -algoritmilla meni labyrintin ratkaisemiseen {aika} sekuntia")
+    print(Fore.WHITE + f"Dead End Filling -algoritmi ratkaisi labyrintin {aika} nanosekunnissa.")
     print('\n')
 
 
