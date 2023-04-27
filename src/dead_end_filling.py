@@ -46,7 +46,8 @@ class DeadEndFilling:
             
 
     def ratkaise(self):
-        """Tämä metodi ratkaisee kaikki polut, joilla on mahdollista päästä ulos labyrintistä"""
+        """Tämä metodi ratkaisee kaikki polut, joilla on mahdollista päästä ulos labyrintistä tutkimalla, onko kyseinen kohta umpikuja vai ei. Lopussa palautetaan
+        labyrintti sellaisessa muodossa, jossa näkyy kaikki mahdolliset reitit ulos."""
         polku = True
 
         while polku:
@@ -58,4 +59,3 @@ class DeadEndFilling:
         
         ratkaisu = self.labyrintti
         return ratkaisu
-

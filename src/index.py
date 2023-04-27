@@ -37,6 +37,8 @@ def main():
 
     ui.dead_end_ratkaisu(dead_end_ratkaisu, dead_end_kulutus)
     
+    """Tulostetaan lopputulos"""
+    
     if dead_end_kulutus > tre_kulutus:
         ui.lopputulos("Trémaux")
     elif dead_end_kulutus < tre_kulutus:

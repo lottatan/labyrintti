@@ -20,7 +20,7 @@ class Tremaux:
     def ratkaise(self):
         """Tässä metodissa ratkaistaan algoritmi niin, että tehdään taulukko, jossa pidetään kirjaa vierailluista solmuista. Taulukko alustetaan niin, että jokainen
         solmu saa arvoksi 0. Kun solmussa vieraillaan, vaihdetaan taulukon arvoksi 1. Kuljettua polkua pidetään muistissa pinossa. Jos tullaan risteykseen, missä on monta suuntaa, mihin ei olla kuljettu,
-        niin arvotaan suunta, johon mennään"""
+        niin arvotaan suunta, johon mennään. Lopussa palautetaan kuljetun polun koordinaatit."""
 
         alku = (self.aloituskorkeus, self.aloitusleveys)
 
