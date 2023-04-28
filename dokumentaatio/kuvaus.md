@@ -1,6 +1,6 @@
 # Ohjelman kuvaus
 
-Ohjelma luo labyrintin käyttäjän antamien tietojen perusteella. Käyttäjä antaa labyrintille leveyden ja korkeuden väliltä 5-30. Ohjelma luo labyrintin ja käyttää kahta eri algoritmia sen ratkaisemiseen. Käytettävät algoritmit ovat Dead End Filling- ja Trémaux-algoritmit. Labyrintti alkaa ensimmäiseltä riviltä ja viimeisellä rivillä on mahdollisesti monta ulospääsyä.
+Ohjelma luo labyrintin käyttäjän antamien tietojen perusteella. Käyttäjä antaa labyrintille leveyden ja korkeuden väliltä 5-30. Ohjelma luo labyrintin ja käyttää kahta eri algoritmia sen ratkaisemiseen. Käytettävät algoritmit ovat Dead End Filling- ja Trémaux-algoritmit. Labyrintti alkaa ensimmäiseltä riviltä ja viimeisellä rivillä on yksi ulospääsy.
 
 
 ## Algoritmit

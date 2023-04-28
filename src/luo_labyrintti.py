@@ -22,7 +22,7 @@ class Labyrintti:
 
     def aloitus_kohta(self):
         """Valitaan satunnainen aloituskohta labyrintille ja varmistetaan, että se ei ole labyrintin reunassa"""
-        self.aloitus_leveys = int(random.randint(1, self.leveys-1))
+        self.aloitus_leveys = int(random.randint(1, self.leveys-2))
         self.aloitus_korkeus = 1
 
     def viereiset_polut(self, random_seina):
@@ -215,10 +215,15 @@ class Labyrintti:
                 if self.labyrintti[i][j] == "X":
                     self.labyrintti[i][j] = "#"
         
-        """Tehdään labyrinttiin monta ulospääsykohtaa"""
+        ulospaasyt = []
+        """Tehdään labyrinttiin yksi ulospääsykohta"""
         for i in range(0, self.leveys):
             if self.labyrintti[self.korkeus-2][i] == ".":
-                self.labyrintti[self.korkeus-1][i] = "."
+                ulospaasyt.append((self.korkeus-1, i))
+        
+        ulospaasy = random.choice(ulospaasyt)
+
+        self.labyrintti[ulospaasy[0]][ulospaasy[1]] = "."
 
         """Tehdään labyrinttiin yksi sisäänpääsykohta"""
         self.labyrintti[self.aloitus_korkeus-1][self.aloitus_leveys] = "."

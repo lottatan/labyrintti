@@ -10,7 +10,7 @@ def tervetuloa():
     
     while True:
         try:
-            korkeus = int(input("Valitse labyrintin korkeus (kokonaisluku, joka on vähintään 5 ruutua ja enintään 80 ruutua): "))
+            korkeus = int(input("Valitse labyrintin korkeus (kokonaisluku, joka on vähintään 5 ruutua ja enintään 60 ruutua): "))
             ei_ole_kokonaisluku(korkeus)
             liian_pieni_luku(korkeus)
             liian_iso_luku(korkeus)
@@ -21,7 +21,7 @@ def tervetuloa():
     
     while True:
         try:
-            leveys = int(input("Valitse labyrintin leveys (kokonaisluku, joka on vähintään 5 ruutua ja enintään 80 ruutua): "))
+            leveys = int(input("Valitse labyrintin leveys (kokonaisluku, joka on vähintään 5 ruutua ja enintään 60 ruutua): "))
             ei_ole_kokonaisluku(leveys)
             liian_pieni_luku(leveys)
             liian_iso_luku(leveys)
@@ -41,7 +41,7 @@ def liian_pieni_luku(luku):
         raise ValueError
 
 def liian_iso_luku(luku):
-    if luku > 80:
+    if luku > 60:
         raise ValueError
     
 def ei_ole_kokonaisluku(luku):
