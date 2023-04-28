@@ -1,6 +1,5 @@
 import unittest
-from dead_end_filling import DeadEndFilling
-
+import dead_end_filling
 
 labyrintti = [
         ['#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '.', '#', '#'],
@@ -40,21 +39,20 @@ ratkaisu = [
 
 class TestDeadEndFilling(unittest.TestCase):
     def setUp(self):
-        self.labyrintti = DeadEndFilling(labyrintti)
+        self.labyrintti = labyrintti
 
     def test_loytaa_sisaanpaasyn(self):
-        aloituskorkeus, aloitusleveys = self.labyrintti.aloituskohta()
+        aloituskorkeus, aloitusleveys = dead_end_filling.aloituskohta(self.labyrintti)
 
         self.assertEqual(aloituskorkeus, 0)
         self.assertEqual(aloitusleveys, 12)
 
     def test_loytaa_umpikujan(self):
-        """ei toimi vielä, en tiedä miksi"""
-        umpikuja = self.labyrintti.onko_umpikuja(1, 1)
+        umpikuja = dead_end_filling.onko_umpikuja(self.labyrintti, 1, 1, len(self.labyrintti), len(self.labyrintti[0]))
 
         self.assertEqual(umpikuja, True)
 
     def test_ratkaise(self):
-        ratkaistu = self.labyrintti.ratkaise()
+        ratkaistu = dead_end_filling.ratkaise(self.labyrintti)
 
         self.assertEqual(ratkaistu, ratkaisu)

@@ -29,8 +29,7 @@ def main():
 
     """Ratkaistaan sitten dead-end filling algoritmilla"""
     dead_end_aloitus = time.time_ns()
-    dead_end = dead_end_filling.DeadEndFilling(laby)
-    dead_end_ratkaisu = dead_end.ratkaise()
+    dead_end_ratkaisu = dead_end_filling.ratkaise(laby)
     dead_end_lopetus = time.time_ns()
 
     dead_end_kulutus = dead_end_lopetus - dead_end_aloitus
