@@ -16,11 +16,11 @@
 
 3. Käynnistä ohjelma komenolla:
 
-`` poetry run invoke start``
+``python3 src/index.py``
 
 Tai virtuaaliympäristössä komennolla:
 
-``python3 src/index.py``
+`` poetry run invoke start``
 
 Virtuaaliympäristöön pääset komennolla:
 
