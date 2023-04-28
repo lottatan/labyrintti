@@ -8,6 +8,8 @@ def aloituskohta(labyrintti):
     
     
 def onko_umpikuja(labyrintti, korkeus, leveys, y, x):
+    """Tässä metodissa tutkitaan, onko kyseinen kohta umpikuja. Annetut parametrit ovat labyrintti sillä ratkaisuhetkellä, sen hetkinen koordinaatti ja labyrintin
+    korkeus ja leveys"""
     laskuri = 0
     
     if labyrintti[korkeus][leveys] == '.':
@@ -37,6 +39,7 @@ def onko_umpikuja(labyrintti, korkeus, leveys, y, x):
 
 
 def ratkaise(labyrintti):
+    """Tämä metodi ratkaisee labyrintin dead-end filling metodilla. Labyrintissä kuljetaan askel kerrallaan ja tutkitaan, onko kyseinen kohta umpikuja."""
     y = len(labyrintti)
     x = len(labyrintti[0])
 
