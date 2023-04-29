@@ -25,3 +25,5 @@ Tai virtuaaliympäristössä komennolla:
 Virtuaaliympäristöön pääset komennolla:
 
 ``poetry shell``
+
+Ohjelma hyväksyy ainoastaan kokonaislukuja 5 ja 60 väliltä. Ohjelman ajamiseen tarvittavat käskyt löytyvät myös tasks.py tiedostosta.
