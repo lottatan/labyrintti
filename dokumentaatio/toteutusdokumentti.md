@@ -31,8 +31,10 @@ Ohjelmaa voisi parantaa niin, että käyttöliittymä olisi graafinen. Puutteita
 
 
 Lähteet:
+
 https://en.wikipedia.org/wiki/Maze-solving_algorithm
 https://en.wikipedia.org/wiki/Depth-first_search
 http://blog.jamisbuck.org/2014/05/12/tremauxs-algorithm.html
 https://en.wikipedia.org/wiki/Tr%C3%A9maux_tree
 https://forum.arduino.cc/t/how-to-implement-tremaux-explore-algorithm-for-a-maze/632390
+https://iopscience.iop.org/article/10.1088/1742-6596/1569/2/022059/pdf
