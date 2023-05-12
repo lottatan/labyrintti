@@ -1,5 +1,3 @@
-from colorama import Fore
-
 def aloituskohta(labyrintti):
     """Tässä metodissa etsitään labyrintin ensimmäiseltä riviltä aloituskohta"""
     for i in range(0, len(labyrintti[0])):
