@@ -27,14 +27,17 @@ class Tremaux:
         pino = [alku]
         vierailtu = [[0 for i in range(self.x)] for j in range(self.y)]
         vierailtu[alku[0]][alku[1]] = 1
+        polku = []
 
         while pino:
             atm = pino[-1]
             y = atm[0]
             x = atm[1]
 
+            polku.append((y, x))
+
             if y == self.y-1 and self.labyrintti[y][x] == ".":
-                return(pino)
+                return(pino, polku)
 
             ei_vierailtu = []
 

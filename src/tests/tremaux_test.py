@@ -33,6 +33,7 @@ class TestTremaux(unittest.TestCase):
         self.assertEqual(aloitusleveys, 12)
 
     def test_ratkaise(self):
-        ratkaisu = self.labyrintti.ratkaise()
+        ratkaisu, polku = self.labyrintti.ratkaise()
 
         self.assertNotEqual(ratkaisu, "Ei ratkaisua")
+        self.assertNotEqual(0, len(polku))

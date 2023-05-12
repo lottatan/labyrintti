@@ -67,7 +67,7 @@ def nayta_labyrintti(labyrintti):
     print(Fore.WHITE + "Seuraavaksi verrataan, kumpi algoritmi ratkaisee labyrintin nopeammin - Dead End Filling vai Trémaux?")
     print('\n')
 
-def tre_ratkaisu(ratkaisu, aika):
+def tre_ratkaisu(ratkaisu, aika, polku):
     """Tämä funktio näyttää Trémauxin suorittaman ratkaisun, sekä ajan, joka kului labyrintin ratkaisemiseen"""
 
     print("Trémauxin algoritmin ratkaisu:")
@@ -79,7 +79,7 @@ def tre_ratkaisu(ratkaisu, aika):
                 print(Fore.RED + str(ratkaisu[i][j]), end= " ")
         print('\n')
 
-    print(Fore.WHITE + f"Trémauxin algoritmi ratkaisi labyrintin {aika} nanosekunnissa.")
+    print(Fore.WHITE + f"Trémauxin algoritmi ratkaisi labyrintin {aika} nanosekunnissa. Algoritmi kulki labyrintissä tässä järjestyksessä: {polku}")
     print('\n')
 
 def dead_end_ratkaisu(ratkaisu, aika, umpikujat):

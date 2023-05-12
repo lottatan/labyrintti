@@ -15,7 +15,7 @@ def main():
     """Ratkaistaan ensin trémauxin algoritmilla"""
     tremaux_aloitus = time.time_ns()
     tre = tremaux.Tremaux(laby)
-    tremaux_ratkaisu = tre.ratkaise()
+    tremaux_ratkaisu, polku = tre.ratkaise()
     tremaux_lopetus = time.time_ns()
     tre_kulutus = tremaux_lopetus - tremaux_aloitus
 
@@ -25,7 +25,7 @@ def main():
     for (i, j) in tremaux_ratkaisu:
         seina_labyrintti[i][j] = "."
 
-    ui.tre_ratkaisu(seina_labyrintti, tre_kulutus)
+    ui.tre_ratkaisu(seina_labyrintti, tre_kulutus, polku)
 
     """Ratkaistaan sitten dead-end filling algoritmilla"""
     dead_end_aloitus = time.time_ns()
