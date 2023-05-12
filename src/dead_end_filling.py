@@ -1,3 +1,5 @@
+from colorama import Fore
+
 def aloituskohta(labyrintti):
     """Tässä metodissa etsitään labyrintin ensimmäiseltä riviltä aloituskohta"""
     for i in range(0, len(labyrintti[0])):
@@ -43,6 +45,8 @@ def ratkaise(labyrintti):
     y = len(labyrintti)
     x = len(labyrintti[0])
 
+    umpikujat = []
+
     polku = True
 
     while polku:
@@ -51,6 +55,7 @@ def ratkaise(labyrintti):
             for leveys in range(x):
                 if onko_umpikuja(labyrintti, korkeus, leveys, y, x):
                     polku = True
+                    umpikujat.append((korkeus, leveys))
     
     ratkaisu = labyrintti
-    return ratkaisu
+    return ratkaisu, umpikujat

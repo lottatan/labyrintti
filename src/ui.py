@@ -82,7 +82,7 @@ def tre_ratkaisu(ratkaisu, aika):
     print(Fore.WHITE + f"Trémauxin algoritmi ratkaisi labyrintin {aika} nanosekunnissa.")
     print('\n')
 
-def dead_end_ratkaisu(ratkaisu, aika):
+def dead_end_ratkaisu(ratkaisu, aika, umpikujat):
     """Tässä funktiossa näytetään, kuinka paljon aikaa kumpikin algoritmi käytti"""
     
     print("Dead End Filling -algoritmin ratkaisu:")
@@ -94,7 +94,7 @@ def dead_end_ratkaisu(ratkaisu, aika):
                 print(Fore.RED + str(ratkaisu[i][j]), end= " ")
         print('\n')
     
-    print(Fore.WHITE + f"Dead End Filling -algoritmi ratkaisi labyrintin {aika} nanosekunnissa.")
+    print(Fore.WHITE + f"Dead End Filling -algoritmi ratkaisi labyrintin {aika} nanosekunnissa. Algoritmi täytti umpikujat tässä järjestyksessä: {umpikujat} ")
     print('\n')
 
 
