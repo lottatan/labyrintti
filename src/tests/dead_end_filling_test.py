@@ -53,9 +53,10 @@ class TestDeadEndFilling(unittest.TestCase):
         self.assertEqual(umpikuja, True)
 
     def test_ratkaise(self):
+        self.labyrintti[1][1] = "."
         ratkaistu, koordinaatit = dead_end_filling.ratkaise(self.labyrintti)
 
         self.assertEqual(ratkaistu, ratkaisu)
-        self.assertEqual(koordinaatit, [(1, 3), (1, 6), (1, 9), (1, 13), (2, 1), (2, 3), (2, 5), (2, 6), (2, 7), (3, 1), (3, 3), (4, 1), (4, 2), (4, 3), (4, 4),
+        self.assertEqual(koordinaatit, [(1, 1), (1, 3), (1, 6), (1, 9), (1, 13), (2, 1), (2, 3), (2, 5), (2, 6), (2, 7), (3, 1), (3, 3), (4, 1), (4, 2), (4, 3), (4, 4),
                         (4, 5), (4, 6), (5, 12), (6, 1), (6, 13), (7, 2), (7, 5), (8, 13), (9, 1), (9, 3), (11, 11), (12, 6), (12, 9), (1, 8), (2, 8), (3, 8), (6, 2),
                         (6, 3), (6, 4), (6, 5), (6, 6), (6, 12), (10, 11), (6, 11), (6, 10)])
