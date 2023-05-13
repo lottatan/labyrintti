@@ -53,6 +53,7 @@ class TestDeadEndFilling(unittest.TestCase):
         self.assertEqual(umpikuja, True)
 
     def test_ratkaise(self):
+        """Muutetaan edellisessä testissä tehty muutos labyrinttiin takaisin alkuperäiseen"""
         self.labyrintti[1][1] = "."
         ratkaistu, koordinaatit = dead_end_filling.ratkaise(self.labyrintti)
 
